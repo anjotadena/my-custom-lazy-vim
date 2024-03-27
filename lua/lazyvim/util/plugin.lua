@@ -34,14 +34,8 @@ function M.setup()
   M.lazy_file()
   table.insert(package.loaders, function(module)
     if M.deprecated_modules[module] then
-<<<<<<< HEAD
-      Util.warn(
-        ("`%s` is no longer included by default in **LazyVim**.\nPlease install the `%s` extra if you still want to use it.")
-        :format(
-=======
       LazyVim.warn(
         ("`%s` is no longer included by default in **LazyVim**.\nPlease install the `%s` extra if you still want to use it."):format(
->>>>>>> 7a5dbea (feat: use LazyVim everywhere instead of `require("lazyvim.util")`)
           module,
           M.deprecated_modules[module]
         ),
